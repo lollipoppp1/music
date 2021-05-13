@@ -1,0 +1,706 @@
+/* 引入字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?848bcs');
+    src:  url('fonts/icomoon.eot?848bcs#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?848bcs') format('truetype'),
+      url('fonts/icomoon.woff?848bcs') format('woff'),
+      url('fonts/icomoon.svg?848bcs#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+* {
+    font-family: "Microsoft YaHei","Helvetica Neue",Helvetica,STHeiTi,sans-serif","Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+}
+/* 回到顶部 */
+.backtop,
+.QQ,
+.QR {
+    position: fixed;
+    right: 70px;
+    width: 49px;
+    height: 44px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'icomoon';
+    background-color: rgba(153,174,188, .3);
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+}
+.backtop {
+    top: 530px;
+    font-size: 13px;
+    padding-top: 5px;
+}
+.QQ {
+    top: 590px;
+    font-size: 22px;
+    padding-top: 9px;
+}
+.QR {
+    top: 650px;
+    font-size: 22px;
+    padding-top: 10px;
+}
+.backtop:hover,
+.QQ:hover,
+.QR:hover {
+    background-color: rgba(231, 76, 60);
+}
+/* 头部模块start */
+.g-header {
+    width: 100%;
+    height: 131px;
+    margin: 0 auto;
+}
+/* 顶部 */
+.header-top {
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+}
+.top-logo {
+    float: left;
+    width: 177px;
+    height: 70px;
+    padding-right: 20px;
+    background: url(https://s2.music.126.net/style/web2/img/frame/topbar.png?9c95b8807653a911d36260436a56c7cb) no-repeat;
+}
+.top-nav li a {
+    float: left;
+    width: 94px;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #fff;
+}
+.lia {
+    background-color: #c20c0c;
+}
+.top-nav li a:hover {
+    color: #c20c0c;
+}
+.top-nav .lia:hover {
+    color: #fff;
+}
+.top-download {
+    position: relative;
+}
+.top-hot {
+    position: absolute;
+    top:-15px;
+    right:-8px;
+    width: 29px;
+    height: 20px;
+    color: #c20c0c;
+    font-size: 12px;
+    font-family: 'icomoon';
+}
+.top-nav li a:hover .top-hot {
+    color: #fff;
+}
+.top-search {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 32px;
+    margin: 25px 0 0 80px;
+    padding-left: 5px;
+    font-family: 'icomoon';
+    color: #9b9b9b;
+    line-height: 32px;
+    background-color: #f5f5f5;
+}
+.top-search input {
+    position: absolute;
+    top: 9px;
+    left: 25px;
+    width: 170px;
+    margin-left: 5px;
+    color: #9b9b9b;
+    font-size: 13px;
+    background-color: #f5f5f5;
+}
+.top-search input::-webkit-search-cancel-button {
+    display: none;
+}
+.top-creator {
+    float: left;
+    width: 90px;
+    height: 32px;
+    line-height: 29px;
+    margin: 25px 0 0 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    border: #ccc 1px solid;
+    border-radius: 10px;
+}
+.top-creator:hover {
+    background-color: #c20c0c;
+}
+.top-sign_in {
+    float: right;
+    margin-top: 30px;
+    color: #fff;
+}
+.top-sign_in:hover {
+    color: #c20c0c;
+}
+/* 导航栏 */
+.header-nav {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+}
+.nav-center {
+    width: 744px;
+    height: 50px;
+    padding-left: 180px;
+}
+.nav-center li a {
+    float: left;
+    margin: 0 17px 0;
+    padding: 18px 13px 0;
+    font-size: 14px;
+}
+.nav-center li a:hover {
+    color: #c20c0c;
+}
+.recommend {
+    border-bottom: #c20c0c 4px solid;
+}
+.nav-center .recommend:hover {
+    color: #000;
+}
+/* 头部模块end */
+
+/* 页面主体模块start */
+/* 版心 */
+.w {
+    width: 1182px;
+    margin: 0 auto;
+}
+.subject {
+    width: 100%;
+    height: 3300px;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+}
+/* 轮播图展示 */
+.banner {
+    width: 100%;
+    height: 391px;
+    padding-top: 30px;
+}
+.b-wrap {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+.b_wrap_img img {
+    width: 930px;
+}
+.b_wrap_img {
+    position: relative;
+    width: 930px;
+    overflow: hidden;
+}
+.b_wrap_img ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10230px;
+}
+.b_wrap_img ul li {
+    float: left;
+}
+/* 按钮箭头 */
+.prev,
+.next {
+    position: absolute;
+    top: 45%;
+    margin-top: -35px;
+    width: 67px;
+    height: 80px;
+    z-index: 2;
+    line-height: 80px;
+    font-family: 'icomoon';
+    font-weight: 300;
+    font-size: 67px;
+    color: rgb(112, 112, 112);
+}
+.prev:hover,
+.next:hover {
+    background: rgba(0,0,0, .1);
+}
+.prev {
+    left: -124px;
+    padding-left: 19px;
+}
+.next {
+    right: -124px;
+    padding-left: 26px;
+}
+/* 小圆点 */
+.wrap-nav {
+    position: absolute;
+    bottom: 2px;
+    left: 370px;
+    width: 220px;
+    height: 20px;
+}
+.wrap-nav li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 7px;
+    background-color: rgb(245, 244, 244);
+    border-radius: 50%;
+}
+.wrap-nav .selected {
+    background-color: #c20c0c;
+}
+.b-right {
+    display: flex;
+    flex-direction: column;
+    width: 252px;
+    height: 361px;
+}
+.b-download {
+    width: 252px;
+    height: 285px;
+    background-image: url("https://s2.music.126.net/style/web2/img/index/download.png?ddad201e2782a5f99b841958bb1ec2f3");
+}
+.b-download a {
+    display: block;
+    width: 215px;
+    height: 56px;
+    margin: 186px 0 0 19px;
+}
+.b-download a:hover {
+    background: url("https://s2.music.126.net/style/web2/img/index/download.png?ddad201e2782a5f99b841958bb1ec2f3") no-repeat 0 -290px;
+}
+.b-client {
+    width: 252px;
+    height: 76px;
+    color: #ccc;
+    text-align: center;
+    background-color: rgba(31, 32, 34);
+}
+.b-client span {
+    color: #c20c0c;
+    font-family: 'icomoon';
+}
+/* 内容模块start */
+.main {
+    display: flex;
+    height: 1445px;
+}
+/* 内容左边部分 */
+.main-left {
+    height: 1445px;
+    padding: 0 0 40px;
+}
+/* 热门推荐 */
+.hot {
+    height: 550px;
+}
+.hot-top,
+.new-top,
+.list-top,
+.singer-top,
+.anchor-top {
+    width: 100%;
+    height: 85px;
+    padding-top: 10px;
+    text-align: center;
+}
+.hot-top h3,
+.new-top h3,
+.list-top h3,
+.singer-top h3,
+.anchor-top h3 {
+    letter-spacing: 8px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #333;
+}
+.hot-top h3 span,
+.new-top h3 span,
+.list-top h3 span,
+.singer-top h3 span,
+.anchor-top h3 span {
+    font-family: 'icomoon';
+    font-size: 30px;
+    color: rgba(231, 76, 60);
+}
+.hot-class {
+    margin: 15px 0 0 290px;
+}
+.hot-class li a {
+    float: left;
+    margin-left: 50px;
+    font-family: 'icomoon';
+    color: #333;
+}
+.hot-class li a:hover,
+.new-more:hover,
+.list-more:hover {
+    color: #c20c0c;
+}
+.class1 {
+    border-bottom: #c20c0c 3px solid;
+}
+.hot-class .class1:hover {
+    color: #000;
+}
+.hot-class .hot-more,
+.new-more,
+.list-more {
+    color: #999;
+}
+.hot-box {
+    width: 100%;
+    padding: 50px 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.hot-box li {
+    width: 250px;
+    height: 400px;
+}
+.hot-box img {
+    width: 100%;
+}
+.hot-boxfont {
+    margin-top: 15px;
+}
+.hot-boxfont a:hover {
+    color: rgba(231, 76, 60);
+}
+.radio {
+    display: inline-block;
+    width: 35px;
+    height: 15px;
+    background-image: url(https://s2.music.126.net/style/web2/img/icon.png?4f0dc585177245959cf853bf25d86a17);
+    background-position: -31px -658px;
+}
+.volume {
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-family: 'icomoon';
+    font-size: 14px;
+    color: #999;
+}
+.volume a {
+    font-family: 'icomoon';
+    color: #999;
+}
+/* 新碟上架 */
+.new {
+    width: 100%;
+    height: 450px;
+}
+.new-disk {
+    width: 100%;
+    height: 188px;
+    margin: 20px 0 37px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.new-disk li {
+    float: left;
+    width: 200px;
+}
+.new-disk img {
+    width: 200px;
+}
+.new-more,
+.list-more {
+    float: right;
+    font-family: 'icomoon';
+}
+.new-diskfont {
+    margin: 10px 0;
+    font-size: 14px;
+}
+.new-diskfont a:hover {
+    color: rgba(231, 76, 60);
+}
+.new-singer {
+    margin-top: 3px;
+    color: #999;
+}
+.new-diskfont .new-singer:hover {
+    text-decoration: underline;
+    color: #999;
+}
+/* 榜单 */
+.list {
+    width: 100%;
+    height: 720px;
+}
+.list-more {
+    margin-right: 140px;
+}
+.list-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 550px;
+    margin-top: 50px;
+    padding: 0 145px;
+}
+.list-box li {
+    float: left;
+    width: 224px;
+    height: 470px;
+    padding: 20px 0 0 30px;
+}
+.list-up {
+    background: url(https://y.qq.com/ryqq/static/media/bg_index_top.5314c494.jpg) 0 0;
+}
+.list-new {
+    background-image: url(https://y.qq.com/ryqq/static/media/bg_index_top.5314c494.jpg);
+    background-position: -224px 0;
+}
+.list-create {
+    background-image: url(https://y.qq.com/ryqq/static/media/bg_index_top.5314c494.jpg);
+    background-position: -448px 0;
+}
+.list-up,
+.list-new,
+.list-create {
+    position: relative;
+}
+.play,
+.add {
+    position: absolute;
+    right: 40px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 26px;
+}
+.play:hover,
+.add:hover {
+    color: #c20c0c;
+}
+.play {
+    top: 30px;
+}
+.add {
+    top: 75px;
+}
+.ranking {
+    margin: 10px 0 0 -45px;
+}
+.ranking li{
+    height: 40px;
+    padding-top: 10px;
+}
+.ranking li a {
+    color: #fff;
+}
+.ranking1 {
+    font-weight: 600;
+    color: rgba(114, 162, 224);
+}
+.ranking2 {
+    font-weight: 600;
+    color: rgba(80, 186, 192);
+}
+.ranking3 {
+    font-weight: 600;
+    color: rgba(201, 84, 116);
+}
+/* 入驻歌手 */
+.singer {
+    width: 100%;
+    height: 450px;
+}
+.singer-box {
+    display: flex;
+    justify-content: space-between;
+}
+.singer-box li {
+    float: left;
+    margin-top: 40px;
+}
+.singer-box img {
+    width: 190px;
+    border-radius: 95px;
+}
+.singer-font {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+.singer-font span {
+    font-family: 'icomoon';
+    color: #c20c0c;
+}
+.singer button {
+    float: right;
+    width: 400px;
+    height: 50px;
+    margin: 45px 60px 0 0;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #646262;
+    border-radius: 10px;
+}
+.singer button:hover {
+    color: #fff;
+    background-color: rgba(231,76,60);
+}
+/* 热门主播 */
+.anchor {
+    width: 100%;
+    height: 690px;
+    margin-top: 50px;
+}
+.anchor-box {
+    width: 100%;
+    padding-left: 68px;
+}
+.anchor-box li {
+    float: left;
+    display: flex;
+    margin: 50px 0 0;
+    border-bottom: #ccc 1px solid;
+}
+.anchor-box img {
+    width: 200px;
+}
+.anchor-font {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+    margin-left: 30px;
+}
+.anchor-font a {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.anchor-font a:hover {
+    color: #c20c0c;
+}
+.anchor-font span {
+    margin-top: 20px;
+    color: #999;
+}
+/* 尾部模块 */
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    border-top: 1px solid #d3d3d3;
+}
+.footer-box {
+    display: flex;
+    height: 300px;
+    padding-left: 30px;
+    color: #999;
+}
+.footer-copy {
+    margin-top: 15px;
+}
+.copy-link a {
+    color: #999;
+}
+.copy-link span {
+    margin: 0 10px;
+}
+.copy-num,
+.policetext {
+    display: inline-block;
+    color: #999;
+}
+.copy-link,
+.copy-banquan,
+.copy-company,
+.copy-jubao,
+.copy-email,
+.copy-alink,
+.copy-num,
+.policetext {
+    margin-top: 15px;
+}
+.footer-copy a:hover {
+    text-decoration: underline;
+}
+.policelogo {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(https://s2.music.126.net/style/web2/img/3rd/police.png?f714e74afcfd6ea486d4fbae1c3d58a7);
+    background-size: cover;
+}
+.enter {
+    margin: 100px 0 0 150px;
+    width: 500px;
+    height: 70px;
+}
+.unit {
+    float: left;
+    width: 60px;
+    height: 70px;
+    margin-left: 40px;
+}
+.unit1,
+.unit2,
+.unit3,
+.unit4,
+.unit5 {
+    display: inline-block;
+    width: 50px;
+    height: 45px;
+    background: url(https://s2.music.126.net/style/web2/img/foot_enter_new.png?0fa2dbf34d0c6a4965472f925bd8b578) no-repeat;
+    background-size: 110px 552px;
+}
+.unit1 {
+    background-position: -63px -456.5px;
+}
+.unit2 {
+    background-position: -63px -101px;
+}
+.unit3 {
+    background-position: -60px -50px;
+}
+.unit4 {
+    background-position: 0 -101px;
+}
+.unitfont1,
+.unitfont2,
+.unitfont3,
+.unitfont4,
+.unitfont5 {
+    width: 60px;
+    height: 14px;
+    margin-top: 4px;
+    background: url(https://s2.music.126.net/style/web2/img/foot_enter_tt.png?11dbca9929a6882c187ab9990f0a9476) no-repeat;
+    background-size: 180px 139px;
+}
+.unitfont1 {
+    width: 72px;
+    background-position: -89px -106px;
+}
+.unitfont2 {
+    background-position: -64px -88px;
+}
+.unitfont3 {
+    background-position: -61px 2px;
+}
+.unitfont4 {
+    background-position: -65px -53px;
+}
+.unitfont5 {
+    background-position: -66px -72px;
+}
