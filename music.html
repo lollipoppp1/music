@@ -17,12 +17,52 @@
 </head>
 
 <body>
+    <!-- 登录框 -->
+    <div class="signin">
+        <div class="signin_top">
+            <div class="serweima">登录</div>
+            <span><a href="javascript:void(0);" class="close">×</a></span>
+        </div>
+        <div class="signin_main">
+            <div class="signin_num">
+                <div class="signin_ber">手机号：</div>
+                <input type="text" placeholder="请输入手机号" class="phonenum">
+            </div>
+            <div class="signin_pwd">
+                <div class="signin_pass">登录密码：</div>
+                <input type="password" placeholder="请输入密码" class="password">
+            </div>
+            <button class="signin_btn">登录</button>
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="signin-bg"></div>
     <!-- 回到顶部 -->
-    <div href="#" class="backtop">TOP<br></div>
-    <!-- QQ登录 -->
-    <a href="#" class="QQ"></a>
-    <!-- 二维码登录 -->
-    <a href="" class="QR"></a>
+    <div class="backtop">TOP<br></div>
+    <!-- 页面播放器 -->
+    <div class="player">
+        <div class="singimg"><img src="http://s4.music.126.net/style/web2/img/default/default_album.jpg" alt=""></div>
+        <div class="sing_heart"></div>
+        <div class="sing_btn"><audio src="#" controls="controls" class="audioUrl"></audio>
+            <!-- <a href="" class="sing_prev"></a><a href="" class="sing_play"></a><a href="" class="sing_next"></a> -->
+        </div>
+        <!-- <div class="singPB"></div> -->
+        <div class="sing_small">
+            <div class="sing_share"></div>
+            <div class="sing_loop"></div>
+            <div class="sing_list"></div>
+            <div class="listfake">
+                <ul>
+                    <li class="url1">不加糖(ZERO)</li>
+                    <li class="url2">假摔</li>
+                    <li class="url3">My Cookie Can</li>
+                </ul>
+            </div>
+            <!-- <div class="sing_voice"><span class="voicePB"></span></div> -->
+        </div>
+        <div class="sing_unlock"></div>
+        <div class="sing_lock"></div>
+    </div>
     <!-- 头部导航模块 -->
     <div class="g-header">
         <!-- 顶部 -->
@@ -39,7 +79,7 @@
                 </ul>
                 <div class="top-search"><input type="search" placeholder="音乐/视频/电台/用户"></div>
                 <a href="#" class="top-creator">创造者中心</a>
-                <a href="#" class="top-sign_in">登录</a>
+                <a href="javascript:;" class="top-sign_in">登录</a>
             </div>
         </div>
         <!-- 导航栏 -->
@@ -161,33 +201,43 @@
                         <h3><span></span> 新碟上架</h3><a href="" class="new-more">更多 </a>
                     </div>
                     <ul class="new-disk">
-                        <li><a href="#"><img
+                        <li><a href="#" class="new_a"><img
                                     src="http://p3.music.126.net/COjTCd7EEqDm8tSFw4xgbw==/109951165932652975.jpg?param=100y100"
-                                    alt=""></a>
+                                    alt="">
+                                <div class="new-mask"><span></span></div>
+                            </a>
                             <div class="new-diskfont"><a href="">Your Power</a><br><a href="" class="new-singer">Billie
                                     Eilish</a></div>
                         </li>
-                        <li><a href="#"><img
+                        <li><a href="#" class="new_a"><img
                                     src="http://p3.music.126.net/v_8MW9I0ybDNW6JloVaaVw==/109951165870857907.jpg?param=100y100"
-                                    alt=""></a>
+                                    alt="">
+                                <div class="new-mask"><span></span></div>
+                            </a>
                             <div class="new-diskfont"><a href="">Walpurgis</a><br><a href=""
                                     class="new-singer">Aimer</a></div>
                         </li>
-                        <li><a href="#"><img
+                        <li><a href="#" class="new_a"><img
                                     src="http://p4.music.126.net/ZkhqfdOxyDAwpRLmfC91Lg==/109951165928935729.jpg?param=100y100"
-                                    alt=""></a>
+                                    alt="">
+                                <div class="new-mask"><span></span></div>
+                            </a>
                             <div class="new-diskfont"><a href="">EMERGING:the Remix</a><br><a href=""
                                     class="new-singer">范丞丞</a></div>
                         </li>
-                        <li><a href="#"><img
+                        <li><a href="#" class="new_a"><img
                                     src="http://p3.music.126.net/Ggpf7jURLCUKKlT4qAUW4Q==/109951165929809633.jpg?param=100y100"
-                                    alt=""></a>
+                                    alt="">
+                                <div class="new-mask"><span></span></div>
+                            </a>
                             <div class="new-diskfont"><a href="">Mood(Lil Ghost Remix)</a><br><a href=""
                                     class="new-singer">24kGoldn/iann dior/Lil Gh……</a></div>
                         </li>
-                        <li><a href="#"><img
+                        <li><a href="#" class="new_a"><img
                                     src="http://p4.music.126.net/Cld-gajV3YescBzt1rWWbw==/109951165909496721.jpg?param=100y100"
-                                    alt=""></a>
+                                    alt="">
+                                <div class="new-mask"><span></span></div>
+                            </a>
                             <div class="new-diskfont"><a href="">NANA III</a><br><a href="" class="new-singer">欧阳娜娜</a>
                             </div>
                         </li>

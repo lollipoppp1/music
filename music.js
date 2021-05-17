@@ -1,5 +1,4 @@
 window.addEventListener('load', function () {
-
     //轮播图
     var focus = document.querySelector('.b_wrap_img');
     var ul = focus.querySelector('ul');
@@ -89,7 +88,7 @@ window.addEventListener('load', function () {
     // 鼠标经过停止
     focus.addEventListener('mouseenter', function () {
         clearInterval(timer);
-        timer = none; //清除定时器变量
+        timer = 'none'; //清除定时器变量
     })
     focus.addEventListener('mouseleave', function () {
         timer = setInterval(function () {
@@ -118,4 +117,116 @@ window.addEventListener('load', function () {
             window.scroll(0, window.pageYOffset + step);
         }, 15);
     }
+
+    // 登录界面
+    var login = document.querySelector('.signin');
+    var mask = document.querySelector('.signin-bg');
+    var link = document.querySelector('.top-sign_in');
+    var closeBtn = document.querySelector('.close');
+    var phone = document.querySelector('.phone');
+    link.addEventListener('click', function () {
+        mask.style.display = 'block';
+        login.style.display = 'block';
+    });
+    closeBtn.addEventListener('click', function () {
+        mask.style.display = 'none';
+        login.style.display = 'none';
+    });
+    // 鼠标拖拽跟随移动
+    var title = document.querySelector('.signin_top');
+    // 鼠标按下获取鼠标在盒子内的坐标
+    title.addEventListener('mousedown', function (e) {
+        var x = e.pageX - login.offsetLeft;
+        var y = e.pageY - login.offsetTop;
+        // 鼠标移动
+        document.addEventListener('mousemove', move)
+        function move(e) {
+            login.style.left = e.pageX - x + 'px';
+            login.style.top = e.pageY - y + 'px';
+        }
+        // 鼠标弹起，使鼠标移动事件移除
+        document.addEventListener('mouseup', function () {
+            document.removeEventListener('mousemove', move);
+        })
+    });
+
+    //锁住屏幕
+    var unlock = document.querySelector('.sing_unlock');
+    var lock = document.querySelector('.sing_lock');
+    var player = document.querySelector('.player');
+    unlock.addEventListener('click', function () {
+        lock.style.display = 'block';
+        unlock.style.display = 'none';
+        player.style.bottom = '0';
+    });
+    lock.addEventListener('click', function () {
+        unlock.style.display = 'block';
+        lock.style.display = 'none';
+        player.style.bottom = '-90px';
+    })
+
+    //登录接口
+    var btn = document.querySelector('.signin_btn');
+    var phonenum = document.querySelector('.phonenum');
+    var password = document.querySelector('.password');
+    let state = new XMLHttpRequest()
+    phonenum.addEventListener('keyup', function () {
+        var num = this.value;
+    })
+    password.addEventListener('keyup', function () {
+        var pwd = this.value;
+    })
+    btn.addEventListener('click', function () {
+        let http = new XMLHttpRequest()
+        http.onreadystatechange = function () {
+            if (http.readyState === 4 && http.status === 200) {
+                console.log(JSON.parse(http.responseText))
+            }
+        }
+        http.open("GET", `http://localhost:1220/login/cellphone?phone=num&password=pwd`, true);
+        http.send();
+
+        //登录状态
+        state.onreadystatechange = function () {
+            if (state.readyState === 4 && state.status === 200) {
+                console.log(JSON.parse(http.responseText))
+            }
+        }
+        state.open("GET", `http://localhost:1220//login/status`, true);
+        state.send();
+    })
+
+    //播放器
+    let audio = new XMLHttpRequest()
+    audio.onreadystatechange = function () {
+        if (audio.readyState === 4 && audio.status === 200) {
+            console.log(JSON.parse(audio.responseText))
+        }
+    }
+    audio.open("GET", `http://localhost:1220/lyric?id=1842728629`, true);
+    audio.send();
+    var audioUrl = document.querySelector('.audioUrl');
+    var url1 = document.querySelector('.url1');
+    var url2 = document.querySelector('.url2');
+    var url3 = document.querySelector('.url3');
+    url1.addEventListener('click', function () {
+        audioUrl.src = "https://music.163.com/song/media/outer/url?id=1843007757.mp3";
+    })
+    url2.addEventListener('click', function () {
+        audioUrl.src = "https://music.163.com/song/media/outer/url?id=1842801269.mp3";
+    })
+    url3.addEventListener('click', function () {
+        audioUrl.src = "https://music.163.com/song/media/outer/url?id=1841521017.mp3";
+    })
+    audioUrl.autoplay = true;
+
+    //播放列表
+    var list = document.querySelector('.sing_list');
+    var listfake = document.querySelector('.listfake');
+    list.addEventListener('click', function () {
+        listfake.style.display = 'block';
+    })
+    list.addEventListener('dblclick', function () {
+        listfake.style.display = 'none';
+    })
 })
