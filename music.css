@@ -161,6 +161,34 @@
     height: 90px;
     margin-left: 20px;
 }
+.singername1,
+.singername2,
+.singername3 {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 443px;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    color: #646262;
+}
+.singname1,
+.singname2,
+.singname3 {
+    display: none;
+    top: 51px;
+    left: 422px;
+    position: absolute;
+    width: 102px;
+    height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #646262;
+}
+.singname2 {
+    left: 405px;
+}
 .sing_heart {
     float: left;
     width: 20px;
@@ -368,9 +396,28 @@
 }
 /* 导航栏 */
 .header-nav {
+    position: relative;
     width: 100%;
     height: 50px;
     background-color: #fff;
+}
+.nav_move {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-family: 'icomoon';
+    color: rgba(231, 76, 60);
+    animation: navmove 3s 2 alternate;
+}
+@keyframes navmove {
+    from{left:20px;}
+    to{left:300px;}
+}
+.nav_move:hover {
+    left: 300px;
 }
 .nav-center {
     width: 744px;

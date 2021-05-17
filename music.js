@@ -209,14 +209,42 @@ window.addEventListener('load', function () {
     var url1 = document.querySelector('.url1');
     var url2 = document.querySelector('.url2');
     var url3 = document.querySelector('.url3');
+    var img = document.querySelector('.playerimg');
+    var ername1 = document.querySelector('.singername1');
+    var ername2 = document.querySelector('.singername2');
+    var ername3 = document.querySelector('.singername3');
+    var name1 = document.querySelector('.singname1');
+    var name2 = document.querySelector('.singname2');
+    var name3 = document.querySelector('.singname3');
     url1.addEventListener('click', function () {
         audioUrl.src = "https://music.163.com/song/media/outer/url?id=1843007757.mp3";
+        img.src = "http://p2.music.126.net/yZli971pz305VVWf1G0jqQ==/109951165956509643.jpg?param=130y130";
+        ername2.style.display = 'none';
+        name2.style.display = 'none';
+        ername3.style.display = 'none';
+        name3.style.display = 'none';
+        ername1.style.display = 'block';
+        name1.style.display = 'block';
     })
     url2.addEventListener('click', function () {
         audioUrl.src = "https://music.163.com/song/media/outer/url?id=1842801269.mp3";
+        img.src = "http://p2.music.126.net/EepVxZ_7Z0qAiW_UYcC7EA==/109951165954048759.jpg?param=130y130";
+        ername1.style.display = 'none';
+        name1.style.display = 'none';
+        ername3.style.display = 'none';
+        name3.style.display = 'none';
+        ername2.style.display = 'block';
+        name2.style.display = 'block';
     })
     url3.addEventListener('click', function () {
         audioUrl.src = "https://music.163.com/song/media/outer/url?id=1841521017.mp3";
+        img.src = "http://p2.music.126.net/NRz7WPwThIt26IGwDzOPTg==/109951165956274445.jpg?param=130y130";
+        ername1.style.display = 'none';
+        name1.style.display = 'none';
+        ername2.style.display = 'none';
+        name2.style.display = 'none';
+        ername3.style.display = 'block';
+        name3.style.display = 'block';
     })
     audioUrl.autoplay = true;
 
